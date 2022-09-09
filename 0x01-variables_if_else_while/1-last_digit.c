@@ -19,6 +19,7 @@ int main(void)
 	/* your code goes there */
 	#include <stdio.h>
 	int lastDigit = n % 10;
+	char* str = "Last digit of";
 
 	if (lastDigit > 5)
 	{
@@ -30,7 +31,7 @@ int main(void)
 	}
 	else if (lastDigit < 6 && lastDigit != 0)
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
+		printf("%s %d is %d and is less than 6 and not 0\n", str, n, lastDigit);
 	}
 	return (0);
 }
