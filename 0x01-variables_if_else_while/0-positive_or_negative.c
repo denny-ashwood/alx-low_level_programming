@@ -5,7 +5,8 @@
 
 /* betty style doc for function main goes there */
 
-int main(void) // this a main int function
+// This is a main function
+int main(void)
 {
 	int n;
 
