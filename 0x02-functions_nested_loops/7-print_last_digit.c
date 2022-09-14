@@ -18,4 +18,6 @@ int print_last_digit(int x)
 
 		return (x);
 	}
+
+	return (0);
 }
