@@ -14,8 +14,10 @@ int print_last_digit(int x)
 	{
 		last_digit *= -1;
 	}
-
-	_putchar(last_digit + '0');
+	else
+	{
+		_putchar(last_digit + '0');
+	}
 
 	return 0;
 }
