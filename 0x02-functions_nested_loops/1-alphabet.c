@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - prints the alphabet
  *
  * Return: Always 0.
  */
@@ -13,10 +13,4 @@ void print_alphabet(){
 		_putchar(alphabet);
 		_putchar('\n');
 	}
-}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
 }
