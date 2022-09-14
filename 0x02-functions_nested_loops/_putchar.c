@@ -3,7 +3,7 @@
 
 /**
  * _putchar - writes the passed character to the console
- * @char: character to print
+ * @c: character to print
  *
  * Return: On success (1)
  *
