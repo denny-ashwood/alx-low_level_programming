@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
- * rev_string - reverses a string
- *
- * @s: passed variable
- *
- * Return: no return value
- */
-
+  * rev_string - Reverses a string
+  * @s: the passed string variable
+  *
+  * Return: no return value
+  */
 void rev_string(char *s)
 {
 	int i, c, k;
