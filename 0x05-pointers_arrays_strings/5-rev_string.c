@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,26 +10,26 @@
 
 void rev_string(char *s)
 {
-	int i, iterator, k;
-	char *a, tmp;
+	int i, c, k;
+	char *a, aux;
 
 	a = s;
 
-	while (s[iterator] != '\0')
+	while (s[c] != '\0')
 	{
-		iterator++;
+		c++;
 	}
 
-	for (k = 1; k < iterator; k++)
+	for (k = 1; k < c; k++)
 	{
 		a++;
 	}
 
-	for (i = 0; i < (iterator / 2); i++)
+	for (i = 0; i < (c / 2); i++)
 	{
-		tmp = s[i];
+		aux = s[i];
 		s[i] = *a;
-		*a = tmp;
+		*a = aux;
 		a--;
 	}
 }
