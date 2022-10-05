@@ -1,5 +1,17 @@
 #include "main.h"
-int _abs(int n)
+
+/**
+ * _abs - function that computse the value of an integer
+ * @c: is the int to be used
+ *
+ * Return: 0.
+ */
+int _abs(int c)
 {
-	return (0);
+	if (c > 0 || c == 0)
+	{
+		return (c);
+	}
+	else
+		return (c * -1);
 }
