@@ -1,37 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _strlen - counts arrays
- * @s: array of elements
- *
- * Return: 1
- */
-
-int _strlen(char *s)
-{
-	unsigned int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * str_concat - back a pointer to array
- * @s1: first array
- * @s2: second array
- *
- * Return: array always
- */
-
+  * str_concat - Concatenates two strings of any size
+  * @s1: the first string to concatenate
+  * @s2: the second string to concatenate
+  *
+  * Return: the two strings concatenated
+  */
 char *str_concat(char *s1, char *s2)
 {
-	char *dst;
-	unsigned int i, j, size;
+	int i = 0, j = 0, k = 0, l = 0;
+	char *s;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -39,21 +20,34 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	size = (_strlen(s1) + _strlen(s2) + 1);
-
-	dst = (char *) malloc(size * sizeof(char));
-
-	if (dst == 0)
-	{
-		return (NULL);
-	}
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(dst + i) = *(s1 + i);
-
-	for (j = 0; *(s2 + j) != '\0'; j++)
-	{
-		*(dst + i) = *(s2 + j);
+	while (s1[i])
 		i++;
+
+	while (s2[j])
+		j++;
+
+	l = i + j;
+	s = malloc((sizeof(char) * l) + 1);
+
+	if (s == NULL)
+		return (NULL);
+
+	j = 0;
+
+	while (k < l)
+	{
+		if (k <= i)
+			s[k] = s1[k];
+
+		if (k >= i)
+		{
+			s[k] = s2[j];
+			j++;
+		}
+
+		k++;
 	}
-	return (dst);
+
+	s[k] = '\0';
+	return (s);
 }
